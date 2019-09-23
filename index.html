@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSC Notes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+<header>
+    <div class="logo">
+        <a href="/">
+            <object type="image/svg+xml" data="static/images/logo.svg" class="img-btn"></object>
+        </a>
+    </div>
+    <ul class="action-menu">
+        <li class="active-btn"><img alt="search" src="static/UIkit/menu.svg" class="img-btn"></li>
+        <li class="active-btn"><img alt="search" src="static/UIkit/search.svg" class="img-btn"></li>
+    </ul>
+</header>
+<div class="content">
+    <div class="new-note">
+        <div class="nn-form">
+            <input type="text" placeholder="Title" class="nn-title">
+            <textarea placeholder="Take a note..." rows="3" class="nn-text"></textarea>
+        </div>
+        <div class="actions">
+            <div class="color-menu">
+                <img src="static/UIkit/color-picker.svg" alt="Pick color" class="img-btn  active-btn" >
+            </div>
+            <ul class="action-menu">
+                <li class="save-btn active-btn">
+                    <img src="static/UIkit/send.svg" alt="Save" class="img-btn">
+                </li>
+                <li class="cancel-btn active-btn">
+                    <img src="static/UIkit/cancel.svg" alt="Cancel" class="img-btn">
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <ul class="task-list">
+        <li class="task ts-done">
+            <div class="task-content">
+                <h3>Assignment #1. Markup</h3>
+                <p>Create basic markup using html tags and containers. The main output from this assignment is an
+                    index.html file</p>
+            </div>
+        </li>
+        <li class="task ts-future">
+            <div class="task-content">
+                <h3>Assignment #2. Styling</h3>
+                <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should
+                    be in BEM naming convention. Each block or element should be reusable as a component. Result is
+                    static pixel-perfect markup without interaction</p>
+            </div>
+        </li>
+        <li class="task ts-done">
+            <div class="task-content">
+                <h3>Assignment #3. Set up project and create React Components</h3>
+                <p>Create react app project, move all index.html and styles.css to React components. Split components to
+                    chunks</p>
+            </div>
+        </li>
+        <li class="task ts-future">
+            <div class="task-content">
+                <h3>Assignment #4. Store & Data Management</h3>
+                <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should
+                    be in BEM naming convention. Each block or element should be reusable as a component. Result is
+                    static pixel-perfect markup without interaction</p>
+            </div>
+
+        </li>
+        <li class="task ts-future">
+            <div class="task-content">
+                <h3>Assignment #5. API</h3>
+                <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should
+                    be in BEM naming convention. Each block or element should be reusable as a component. Result is
+                    static pixel-perfect markup without interaction</p>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

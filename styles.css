@@ -140,6 +140,9 @@ header .action-menu li {
 .nn-title ::placeholder{
     color: var(--gray50);
 }
+.nn-title:focus{
+    outline: 0;
+}
 
 .nn-text {
     font-family: "SF UI Text", Arial, sans-serif;
@@ -149,6 +152,9 @@ header .action-menu li {
     margin-top: 5px;
     resize: vertical;
     min-height: 72px;
+}
+.nn-text:focus{
+    outline: 0;
 }
 
 .nn-text ::placeholder{

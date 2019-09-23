@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <title>CSC Notes</title>
     <link rel="stylesheet" href="styles.css">
-    </head>
+</head>
 <body>
 <header>
-    <div class="logo">
-        <a href="/">
-            <object type="image/svg+xml" data="static/images/logo.svg" class="img-btn"></object>
-        </a>
-    </div>
+    <a href="/" class="logo">
+        <img alt="logo" src="static/images/logo.svg" class="img-btn">
+    </a>
     <ul class="action-menu">
         <li class="active-btn"><img alt="search" src="static/UIkit/menu.svg" class="img-btn"></li>
         <li class="active-btn"><img alt="search" src="static/UIkit/search.svg" class="img-btn"></li>
@@ -20,12 +18,16 @@
 <div class="content">
     <div class="new-note">
         <div class="nn-form">
-            <input type="text" placeholder="Title" class="nn-title">
-            <textarea placeholder="Take a note..." rows="3" class="nn-text"></textarea>
+            <label>
+                <input type="text" placeholder="Title" class="nn-title">
+            </label>
+            <label>
+                <textarea placeholder="Take a note..." rows="3" class="nn-text"></textarea>
+            </label>
         </div>
         <div class="actions">
             <div class="color-menu">
-                <img src="static/UIkit/color-picker.svg" alt="Pick color" class="img-btn  active-btn" >
+                <img src="static/UIkit/color-picker.svg" alt="Pick color" class="img-btn  active-btn">
             </div>
             <ul class="action-menu">
                 <li class="save-btn active-btn">

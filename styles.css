@@ -3,14 +3,18 @@
     --content-width: 800px;
     --icon-size: 40px;
     --side-margin: 16px;
+    --status-width: 3px;
+
 
 
     --block-bg: #FFFFFF;
     --global-bg: #FFFFFF;
 
-    --gray50: #37414880;
+    --b-shadow-color: rgba(13,63,103,0.14);
+    --l-shadow-color: rgba(13,63,103,0.10);
 
     --btn-primary: #0D3F67;
+    --gray50: #37414880;
 
     --h-color: #3A4248;
     --p-color: #20282F;
@@ -19,9 +23,12 @@
     --task-future: #6B48FF;
 }
 
-.dark-theme{
+.dark-theme {
     --block-bg: #22272b;
     --global-bg: #171c20;
+
+    --b-shadow-color: rgba(13,63,103,0.14);
+    --l-shadow-color: rgba(13,63,103,0.10);
 
     --h-color: #d0d0d0;
     --p-color: #bfbfbf;
@@ -41,6 +48,10 @@
 }
 
 body {
+    /* Эффекты*/
+    --b-shadow: 0 4px 12px var(--b-shadow-color);
+    --l-shadow: 0 2px 5px var(--l-shadow-color);
+
     margin: 0;
     font-family: "SF UI Text", Arial, sans-serif;
     font-size: 17px;
@@ -51,26 +62,32 @@ body {
 h1, h2, h3, h4, h5, h6 {
     color: var(--h-color);
 }
+
 p {
     color: var(--p-color);
 }
 
 
+.img-btn {
+    height: var(--icon-size);
+}
+
 .active-btn {
     cursor: pointer;
 }
 
-.action-menu {
+.left-menu {
     height: var(--icon-size);
     margin: 0;
     padding: 0;
-    float: right;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-.action-menu li {
+.left-menu li {
     display: inline-block;
-    float: right;
     height: var(--icon-size);
+    margin-left: 12px;
 }
 
 header {
@@ -78,34 +95,22 @@ header {
     height: var(--header-height);
     padding: calc((var(--header-height) - var(--icon-size)) / 2) 0;
     margin: 0 calc((100% - var(--content-width)) / 2);
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
 }
 
-.img-btn {
-    height: var(--icon-size);
-}
 
 header .logo {
     box-sizing: border-box;
     display: inline-block;
-    width: 30%;
-    height: var(--icon-size);
     padding: calc(var(--icon-size) / 10);
     margin: 0;
-
-
 }
 
 header .logo img {
     height: calc(var(--icon-size) * 0.8);
     margin: 0;
-}
-
-header .action-menu {
-    width: 70%;
-}
-
-header .action-menu li {
-    margin-left: 12px;
 }
 
 .content {
@@ -114,14 +119,14 @@ header .action-menu li {
 
 .new-note {
     background: var(--block-bg);
-    box-shadow: 0 4px 12px rgba(13, 63, 103, 0.14);
+    box-shadow: var(--b-shadow);
     border-radius: 6px;
     padding-bottom: 10px;
 }
 
 .new-note input, textarea {
     border: none;
-    width: calc(100% - 2*var(--side-margin));
+    width: calc(100% - 2 * var(--side-margin));
     margin-left: var(--side-margin);
     margin-right: var(--side-margin);
     padding: 0;
@@ -131,17 +136,10 @@ header .action-menu li {
 
 .nn-title {
     font-family: "SF UI Display", Arial, sans-serif;
-    font-size: 20px;
+    font-size: 120%;
     line-height: 24px;
     color: var(--h-color);
     margin-top: 15px
-}
-
-.nn-title ::placeholder{
-    color: var(--gray50);
-}
-.nn-title:focus{
-    outline: 0;
 }
 
 .nn-text {
@@ -153,74 +151,71 @@ header .action-menu li {
     resize: vertical;
     min-height: 72px;
 }
-.nn-text:focus{
-    outline: 0;
-}
 
-.nn-text ::placeholder{
+.nn-title ::placeholder {
     color: var(--gray50);
 }
 
+.nn-text ::placeholder {
+    color: var(--gray50);
+}
+
+.nn-title:focus, .nn-text:focus {
+    outline: 0;
+}
 
 .new-note .actions {
     height: var(--icon-size);
-    margin: 6px calc(var(--side-margin)/2) 0 calc(var(--side-margin)/2) ;
+    margin: 6px calc(var(--side-margin) / 2) 0 calc(var(--side-margin) / 2);
+    display: flex;
+    justify-content: space-between;
 }
+
 .new-note .actions .color-menu {
     height: var(--icon-size);
-    width: 30%;
+    width: var(--icon-size);
     margin: 0;
-    float: left;
-}
-.new-note .actions .action-menu{
-    height: var(--icon-size);
-    width: 70%;
-    margin: 0;
-}
-.new-note .actions .action-menu li {
-    margin-left: 16px;
 }
 
 
-.task-list{
+.task-list {
     list-style-type: none;
     padding: 0;
 }
 
 .task {
     margin-top: 16px;
-    box-shadow: 0 2px 5px rgba(13, 63, 103, 0.1);
-    border-radius: 0 10px 10px 0;
+    background: var(--block-bg);
+    border-radius: 0 6px 6px 0;
+    box-shadow: var(--l-shadow);
+    position: relative;
+
 }
 
-.task-status{
-    width: 3px;
-    height: inherit;
-    margin: 0;
-    float: left;
+.task-status {
+    position: absolute;
+    height: 100%;
+    width: var(--status-width);
     display: inline-block;
 }
 
 .ts-future {
     background: var(--task-future);
-    color: var(--task-future);
 }
+
 .ts-done {
     background: var(--task-done);
-    color: var(--task-future);
 }
 
 .task-content {
-    background: var(--block-bg);
-    border-radius: 0 6px 6px 0;
-    padding: 17px calc(var(--side-margin)) 22px calc(var(--side-margin) - 3px);
-    margin: 0 0 0 3px;
-    width: calc(100% - var(--side-margin)*2);
+    padding: var(--side-margin);
 }
+
 .task-content h3 {
     font-family: "SF UI Display", Arial, sans-serif;
     margin: 0 0 5px 0;
 }
+
 .task-content p {
     margin: 0;
 }

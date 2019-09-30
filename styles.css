@@ -2,16 +2,15 @@
     --header-height: 72px;
     --content-width: 800px;
     --icon-size: 40px;
-    --side-margin: 16px;
     --status-width: 3px;
-
+    --border-radius: 6px;
 
 
     --block-bg: #FFFFFF;
     --global-bg: #FFFFFF;
 
-    --b-shadow-color: rgba(13,63,103,0.14);
-    --l-shadow-color: rgba(13,63,103,0.10);
+    --b-shadow-color: rgba(13, 63, 103, 0.14);
+    --l-shadow-color: rgba(13, 63, 103, 0.10);
 
     --btn-primary: #0D3F67;
     --gray50: #37414880;
@@ -27,8 +26,8 @@
     --block-bg: #22272b;
     --global-bg: #171c20;
 
-    --b-shadow-color: rgba(13,63,103,0.14);
-    --l-shadow-color: rgba(13,63,103,0.10);
+    --b-shadow-color: rgba(13, 63, 103, 0.14);
+    --l-shadow-color: rgba(13, 63, 103, 0.10);
 
     --h-color: #d0d0d0;
     --p-color: #bfbfbf;
@@ -41,30 +40,39 @@
     font-family: "SF UI Display"; /* Гарнитура шрифта */
     src: url(static/Fonts/sf-ui-display/sf-ui-display-medium.otf); /* Путь к файлу со шрифтом */
 }
-
 @font-face {
     font-family: "SF UI Text"; /* Гарнитура шрифта */
     src: url(static/Fonts/sf-ui-text/SFUIText-Regular.ttf); /* Путь к файлу со шрифтом */
 }
 
-body {
+html {
     /* Эффекты*/
-    --b-shadow: 0 4px 12px var(--b-shadow-color);
-    --l-shadow: 0 2px 5px var(--l-shadow-color);
+    --b-shadow: 0 0.25rem 0.75rem var(--b-shadow-color);
+    --l-shadow: 0 0.1rem 0.25rem var(--l-shadow-color);
 
-    margin: 0;
     font-family: "SF UI Text", Arial, sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     background: var(--global-bg);
-    line-height: 24px;
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: "SF UI Display", Arial, sans-serif;
     color: var(--h-color);
+    line-height: 150%;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
 }
 
 p {
     color: var(--p-color);
+    line-height: 150%;
+
 }
 
 
@@ -87,15 +95,16 @@ p {
 .left-menu li {
     display: inline-block;
     height: var(--icon-size);
-    margin-left: 12px;
+    margin-left: 0.75em;
 }
 
 header {
     box-sizing: border-box;
     height: var(--header-height);
     padding: calc((var(--header-height) - var(--icon-size)) / 2) 0;
-    margin: 0 calc((100% - var(--content-width)) / 2);
+    width: var(--content-width);
     display: flex;
+    flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
 }
@@ -114,42 +123,44 @@ header .logo img {
 }
 
 .content {
-    margin: 0 calc((100% - var(--content-width)) / 2);
+    width: var(--content-width);
 }
 
 .new-note {
     background: var(--block-bg);
     box-shadow: var(--b-shadow);
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .new-note input, textarea {
     border: none;
-    width: calc(100% - 2 * var(--side-margin));
-    margin-left: var(--side-margin);
-    margin-right: var(--side-margin);
+    margin-left: 1rem;
+    margin-right: 1rem;
     padding: 0;
     background: none;
 }
 
-
 .nn-title {
     font-family: "SF UI Display", Arial, sans-serif;
-    font-size: 120%;
-    line-height: 24px;
+    font-weight: 700;
+    font-size: 1.25em;
+
     color: var(--h-color);
-    margin-top: 15px
+    margin-top: .8em
 }
 
 .nn-text {
     font-family: "SF UI Text", Arial, sans-serif;
-    font-size: 17px;
-    line-height: 24px;
+    font-size: 1em;
+
     color: var(--p-color);
-    margin-top: 5px;
+    margin-top: 0.3em;
     resize: vertical;
-    min-height: 72px;
+    min-height: 4.5em;
 }
 
 .nn-title ::placeholder {
@@ -166,7 +177,7 @@ header .logo img {
 
 .new-note .actions {
     height: var(--icon-size);
-    margin: 6px calc(var(--side-margin) / 2) 0 calc(var(--side-margin) / 2);
+    margin: 0.5em 0.5em 0 0.5em;
     display: flex;
     justify-content: space-between;
 }
@@ -184,9 +195,9 @@ header .logo img {
 }
 
 .task {
-    margin-top: 16px;
+    margin-top: 1em;
     background: var(--block-bg);
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
     box-shadow: var(--l-shadow);
     position: relative;
 
@@ -208,15 +219,43 @@ header .logo img {
 }
 
 .task-content {
-    padding: var(--side-margin);
+    padding: 1em;
 }
 
 .task-content h3 {
-    font-family: "SF UI Display", Arial, sans-serif;
-    margin: 0 0 5px 0;
+    margin: 0 0 0.3em 0;
 }
 
 .task-content p {
     margin: 0;
 }
 
+@media screen and (max-width: 980px){
+    :root{
+        --header-height: 6rem;
+        --content-width: 100%;
+        --icon-size: 4rem;
+        --status-width: .5rem;
+
+        --border-radius: 18px;
+    }
+
+    html{
+        font-size: 26px;
+    }
+
+    body{
+        margin: 0 1rem;
+    }
+
+    .task-content h3{
+        font-size: 1.2em;
+    }
+    .task-content p{
+        font-size: 1em;
+    }
+
+    .content {
+        margin: 0;
+    }
+}

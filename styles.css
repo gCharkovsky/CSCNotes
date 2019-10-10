@@ -1,6 +1,6 @@
 :root {
-    --header-height: 72px;
-    --content-width: 800px;
+    --header-height: 68px;
+    --content-width: 100%;
     --icon-size: 40px;
     --status-width: 3px;
     --border-radius: 6px;
@@ -23,23 +23,26 @@
 }
 
 .dark-theme {
-    --block-bg: #22272b;
-    --global-bg: #171c20;
+    --block-bg: #595959;
+    --global-bg: #252525;
 
-    --b-shadow-color: rgba(13, 63, 103, 0.14);
-    --l-shadow-color: rgba(13, 63, 103, 0.10);
+    --b-shadow-color: rgba(255, 255, 255, 0.12);
+    --l-shadow-color: rgba(255, 255, 255, 0.1);
 
-    --h-color: #d0d0d0;
-    --p-color: #bfbfbf;
+    --h-color: #FFFFFF;
+    --p-color: #CCCCCC;
 
     --task-done: #1EE3CF;
     --task-future: #6B48FF;
+
+    --btn-primary: #B9BBBD;
 }
 
 @font-face {
     font-family: "SF UI Display"; /* Гарнитура шрифта */
     src: url(static/Fonts/sf-ui-display/sf-ui-display-medium.otf); /* Путь к файлу со шрифтом */
 }
+
 @font-face {
     font-family: "SF UI Text"; /* Гарнитура шрифта */
     src: url(static/Fonts/sf-ui-text/SFUIText-Regular.ttf); /* Путь к файлу со шрифтом */
@@ -57,18 +60,167 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "SF UI Display", Arial, sans-serif;
+    font-weight: 500;
     color: var(--h-color);
-    line-height: 150%;
+    line-height: 1.5rem
 }
 
-body{
+body {
+    background: var(--global-bg);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
+    padding: 0 .75rem;
 }
 
 p {
+    padding-top: 5px;
     color: var(--p-color);
-    line-height: 150%;
+    line-height: 1.5rem;
+}
+
+.svg-fill {
+    fill: var(--btn-primary);
+    stroke: var(--btn-primary);
+}
+
+button {
+    background: none;
+    border: none;
+    height: var(--icon-size);
+    widows: var(--icon-size);
+    padding: 0;
+    cursor: pointer;
+    margin-left: 0.75rem;
+}
+
+button img{
+    height: 100%;
+}
+
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    box-sizing: border-box;
+    border: none;
+    background: var(--block-bg);
+}
+
+textarea::placeholder {
+    color: var(--p-color);
+}
+
+textarea:focus {
+    outline: 0;
+}
+
+.textarea_S {
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    resize: none;
+    color: var(--h-color);
+}
+
+.textarea_M {
+    font-family: "SF UI Text", Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--p-color);
+
+}
+
+
+header {
+    height: var(--header-height);
+    width: var(--content-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: block;
+    box-sizing: border-box;
+    height: var(--icon-size);
+    padding: 4px;
+}
+
+.header-menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-menu__search-btn_collapsed{
+    display: flex;
+}
+.header-menu__search-btn_collapsed textarea{
+    display: none;
+}
+
+main{
+    width: var(--content-width);
+}
+
+.new-note{
+    padding: .5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--b-shadow);
+    background: var(--block-bg);
+    margin-bottom: 1.25rem;
+}
+
+.new-note__action-panel{
+    display: flex;
+    justify-content: space-between;
+    height: var(--icon-size);
+}
+
+.color-picker{
+    margin: calc(var(--icon-size) * 0.2);
+    width: calc(var(--icon-size) * 0.6);
+    height: calc(var(--icon-size) * 0.6);
+    border-radius: var(--icon-size);
+    border: 2px solid var(--btn-primary);
+
+}
+
+
+section{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+article{
+    position: relative;
+    background: var(--block-bg);
+    padding:  1rem 1.5rem 1.5rem 1rem;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    box-shadow: var(--l-shadow);
+    margin-bottom: .75rem;
+}
+
+article::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 3px;
+    color: red;
+    background: red;
+}
+
+@media screen and (min-width: 640px) {
+    :root{
+        --content-width: 800px;
+    }
+
+    body{
+        padding: 0;
+    }
 }

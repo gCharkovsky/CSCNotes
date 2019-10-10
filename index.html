@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+    />
     <title>CSC Notes</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -10,32 +15,40 @@
     <a href="/" class="logo">
         <img alt="logo" src="static/images/logo.svg">
     </a>
-    <div>
-        <label>
+    <div class="header-menu">
+        <button class="header-menu__theme-toggle_dark">
+            <img src="static/UIkit/moon.svg" alt="toggle dark theme">
+        </button>
+        <button class="header-menu__theme-toggle_light">
+            <img src="static/UIkit/sun.svg" alt="toggle dark theme">
+        </button>
+        <button class="header-menu__search-btn_collapsed">
             <img src="static/UIkit/search.svg" alt="search">
-            <input>
-        </label>
-        <button>
+            <textarea placeholder="Search..." rows="1" class="textarea_S"></textarea>
+        </button>
+        <button class="header-menu__menu">
             <img src="static/UIkit/menu.svg" alt="menu">
         </button>
     </div>
 </header>
 <main>
-    <form action="newnote">
-        <textarea placeholder="Title" rows="3"></textarea>
-        <textarea placeholder="Take a note..." rows="3"></textarea>
-        <div>
-            <div>
+    <form action="new_note" class="new-note">
+        <textarea placeholder="Title" rows="1" class="textarea_S"></textarea>
+        <textarea placeholder="Take a note..." rows="3" class="textarea_M"></textarea>
+        <div class="new-note__action-panel">
+            <button class="color-picker">
                 <div>
                     <!--Тут будет всплывающее окошко выбора цвета-->
                 </div>
+            </button>
+            <div class="actions-left">
+                <button>
+                    <img src="static/UIkit/cancel.svg" alt="Cancel">
+                </button>
+                <button>
+                    <img src="static/UIkit/send.svg" alt="Save">
+                </button>
             </div>
-            <button>
-                <img src="" alt="Save">
-            </button>
-            <button>
-                <img src="" alt="Cancel">
-            </button>
         </div>
     </form>
 
@@ -71,4 +84,5 @@
     </section>
 </main>
 </body>
+<script src="script.js"></script>
 </html>

@@ -16,11 +16,9 @@
         <img alt="logo" src="static/images/logo.svg">
     </a>
     <div class="header-menu">
-        <button class="header-menu__theme-toggle_dark">
-            <img src="static/UIkit/moon.svg" alt="toggle dark theme">
-        </button>
-        <button class="header-menu__theme-toggle_light">
-            <img src="static/UIkit/sun.svg" alt="toggle dark theme">
+        <button class="header-menu__toggle-theme" id="theme_toggler">
+            <img src="static/UIkit/moon.svg" alt="toggle dark theme" class="light-only">
+            <img src="static/UIkit/sun.svg" alt="toggle light theme" class="dark-only">
         </button>
         <button class="header-menu__search-btn_collapsed">
             <img src="static/UIkit/search.svg" alt="search">
@@ -52,30 +50,30 @@
         </div>
     </form>
 
-    <section>
-        <article>
+    <section class="notes">
+        <article class="notes__note">
             <h3>Assignment #1. Markup</h3>
             <p>Create basic markup using html tags and containers. The main output from this assignment is an
                 index.html file</p>
         </article>
-        <article>
+        <article class="notes__note">
             <h3>Assignment #2. Styling</h3>
             <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should
                 be in BEM naming convention. Each block or element should be reusable as a component. Result is
                 static pixel-perfect markup without interaction</p>
         </article>
-        <article>
+        <article class="notes__note">
             <h3>Assignment #3. Set up project and create React Components</h3>
             <p>Create react app project, move all index.html and styles.css to React components. Split components to
                 chunks</p>
         </article>
-        <article>
+        <article class="notes__note">
             <h3>Assignment #4. Store & Data Management</h3>
             <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should
                 be in BEM naming convention. Each block or element should be reusable as a component. Result is
                 static pixel-perfect markup without interaction</p>
         </article>
-        <article>
+        <article class="notes__note">
             <h3>Assignment #5. API</h3>
             <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should
                 be in BEM naming convention. Each block or element should be reusable as a component. Result is

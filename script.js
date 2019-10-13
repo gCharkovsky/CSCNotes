@@ -1,16 +1,13 @@
-function set_theme(){
-    if(document.cookie === "dark=true")
+function set_theme() {
+    if (document.cookie === "dark=true")
         document.body.className = "dark-theme";
-    else if(document.cookie === "dark=false"){
+    else if (document.cookie === "dark=false") {
 
-    } else{
+    } else {
         let time = (Date.now() % (1000 * 3600 * 24)) / 3600000 + 3;
         if (time < 8 || time > 20)
             document.body.className = "dark-theme";
     }
-
-
-
 }
 
 set_theme();
@@ -31,6 +28,6 @@ function show_search() {
 }
 
 function hide_search() {
-    if(search.children[1].value === "")
+    if (search.children[1].value === "")
         search.classList.add("header-menu__search_collapsed");
 }

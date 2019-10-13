@@ -7,73 +7,112 @@
             content="width=device-width, initial-scale=1"
     />
     <title>CSC Notes</title>
+    <link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
     <a href="/" class="logo">
-        <img alt="logo" src="static/images/logo.svg">
+<!--        <img alt="logo" src="static/images/logo.svg">-->
+        <svg width="57" height="20" viewBox="0 0 57 20" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.027 7.99889V0.574473L17.3993 3.09001C15.5714 1.38803 13.082 0.33783 10.3505 0.33783C4.63467 0.33783 0 4.52812 0 9.99999C0 15.4719 4.63467 19.6622 10.3505 19.6622C13.9292 19.6622 17.0962 17.8872 18.8987 15.1514L15.912 13.3767C14.7532 15.1266 12.6936 16.3099 10.3505 16.3099C6.71984 16.3099 3.78484 13.5001 3.78484 9.99999C3.78484 6.52458 6.71984 3.71456 10.3505 3.71456C12.1229 3.71456 13.7328 4.3784 14.9135 5.46974L12.2896 7.98156L20.027 7.99889Z"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.6544 14.4853C24.9066 15.6437 26.7325 16.3337 28.793 16.3337C32.4188 16.3337 34.0626 12.6616 30.0453 11.6267L26.7063 10.8132C23.8629 10.0984 21.9068 8.27474 21.9068 5.68707C21.8282 2.72979 25.1152 0.26523 28.793 0.339464C31.3234 0.339464 33.697 1.10314 35.4711 2.40935L33.4102 5.1696C32.1582 4.20859 30.6189 3.71555 28.793 3.71555C25.7411 3.71555 24.2021 6.6484 27.6456 7.58467L30.7754 8.34897C33.7755 9.06347 36.2015 10.8871 36.2015 13.8939C36.2794 17.0977 32.8363 19.7346 28.793 19.6606C26.0017 19.6606 23.4455 18.7735 21.5676 17.27L23.6544 14.4853Z"    />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M54.0785 6.6477C52.9453 4.87303 50.9303 3.71456 48.6383 3.71456C45.0871 3.71456 42.2158 6.52458 42.2158 9.99999C42.2158 13.4998 45.0871 16.3099 48.6383 16.3099C50.9303 16.3099 52.9453 15.127 54.0785 13.3767L57 15.1514C55.2369 17.8872 52.1393 19.6622 48.6383 19.6622C43.0471 19.6622 38.5135 15.4719 38.5135 9.99999C38.5135 4.52812 43.0471 0.33783 48.6383 0.33783C52.1393 0.33783 55.2369 2.13694 57 4.84859L54.0785 6.6477Z"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M48.527 7.02701C46.8253 7.02701 45.4459 8.35801 45.4459 9.99998C45.4459 11.642 46.8253 12.973 48.527 12.973C50.2287 12.973 51.6081 11.642 51.6081 9.99998C51.6081 8.35801 50.2287 7.02701 48.527 7.02701Z"/>
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="57" height="20" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+
+        <h1>&nbspNotes</h1>
     </a>
     <div class="header-menu">
-        <button class="header-menu__toggle-theme" id="theme_toggler">
+        <button class="header-menu__toggle-theme" onclick="toggle_theme()">
             <img src="static/UIkit/moon.svg" alt="toggle dark theme" class="light-only">
             <img src="static/UIkit/sun.svg" alt="toggle light theme" class="dark-only">
         </button>
-        <button class="header-menu__search-btn_collapsed">
-            <img src="static/UIkit/search.svg" alt="search">
-            <textarea placeholder="Search..." rows="1" class="textarea_S"></textarea>
-        </button>
-        <button class="header-menu__menu">
-            <img src="static/UIkit/menu.svg" alt="menu">
+        <form action="" class="header-menu__search header-menu__search_collapsed">
+            <button type="reset" onclick="show_search()">
+                <!--
+                временная мера по покраске иконок
+                <img src="static/UIkit/search.svg" alt="search">
+                -->
+                <svg width="40" height="40" viewBox="0 0 40 40" class="primary-btn" stroke="none" xmlns="http://www.w3.org/2000/svg">
+                    <path   stroke="none" fill-rule="evenodd" clip-rule="evenodd" d="M27 19C27 23.4183 23.4183 27 19 27C14.5817 27 11 23.4183 11 19C11 14.5817 14.5817 11 19 11C23.4183 11 27 14.5817 27 19ZM25.3287 26.7429C23.6049 28.1536 21.4013 29 19 29C13.4772 29 9 24.5228 9 19C9 13.4772 13.4772 9 19 9C24.5228 9 29 13.4772 29 19C29 21.4013 28.1536 23.6049 26.7429 25.3287L32.2071 30.7929L30.7929 32.2071L25.3287 26.7429Z" />
+                </svg>
+            </button>
+            <input type="search" placeholder="Search notes" class="search_S">
+            <button type="reset" class="input__clear" onclick="hide_search()">
+                <img src="static/UIkit/clear.svg" alt="clear">
+            </button>
+        </form>
+        <button class="header-menu__menu primary-btn">
+            <!--
+            временная мера по покраске иконок
+            <img src="static/UIkit/menu.svg" alt="menu" class="svg-fill">
+            -->
+            <svg width="40" height="40" viewBox="0 0 40 40" class="primary-btn" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="12" width="28" height="2" stroke="none"/>
+                <rect x="6" y="19" width="28" height="2" stroke="none"/>
+                <rect x="6" y="26" width="28" height="2" stroke="none"/>
+            </svg>
         </button>
     </div>
 </header>
 <main>
-    <form action="new_note" class="new-note">
+    <form action="" class="new-note">
         <textarea placeholder="Title" rows="1" class="textarea_S"></textarea>
         <textarea placeholder="Take a note..." rows="3" class="textarea_M"></textarea>
         <div class="new-note__action-panel">
-            <button class="color-picker">
-                <div>
-                    <!--Тут будет всплывающее окошко выбора цвета-->
-                </div>
+            <button class="color-picker" type="button">
+                <!--Тут будет всплывающее окошко выбора цвета-->
             </button>
             <div class="actions-left">
-                <button>
-                    <img src="static/UIkit/cancel.svg" alt="Cancel">
+                <button type="button">
+<!--                    <img src="static/UIkit/cancel.svg" alt="Cancel">-->
+                    <svg width="40" height="40" viewBox="0 0 40 40" class="secondary-btn" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.5 11.5L20 20M28.5 28.5L20 20M20 20L28.5 11.5M20 20L11.5 28.5" fill="none" stroke-width="2"/>
+                    </svg>
                 </button>
-                <button>
-                    <img src="static/UIkit/send.svg" alt="Save">
+                <button type="button">
+                    <!--<img src="static/UIkit/send.svg" alt="Save">-->
+                    <svg width="40" height="40" viewBox="0 0 40 40" class="primary-btn" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" d="M10.8534 11.9409L28.5834 20L10.8534 28.0591L13.9285 20.3714L14.077 20L13.9285 19.6286L10.8534 11.9409Z" stroke-width="2"/>
+                    </svg>
                 </button>
             </div>
         </div>
     </form>
 
     <section class="notes">
-        <article class="notes__note">
+        <article class="notes__note notes__note_quad">
             <h3>Assignment #1. Markup</h3>
             <p>Create basic markup using html tags and containers. The main output from this assignment is an
                 index.html file</p>
         </article>
-        <article class="notes__note">
+        <article class="notes__note notes__note_tres">
             <h3>Assignment #2. Styling</h3>
             <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should
                 be in BEM naming convention. Each block or element should be reusable as a component. Result is
                 static pixel-perfect markup without interaction</p>
         </article>
-        <article class="notes__note">
+        <article class="notes__note notes__note_quad">
             <h3>Assignment #3. Set up project and create React Components</h3>
             <p>Create react app project, move all index.html and styles.css to React components. Split components to
                 chunks</p>
         </article>
-        <article class="notes__note">
+        <article class="notes__note notes__note_tres">
             <h3>Assignment #4. Store & Data Management</h3>
             <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should
                 be in BEM naming convention. Each block or element should be reusable as a component. Result is
                 static pixel-perfect markup without interaction</p>
         </article>
-        <article class="notes__note">
+        <article class="notes__note notes__note_tres">
             <h3>Assignment #5. API</h3>
             <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should
                 be in BEM naming convention. Each block or element should be reusable as a component. Result is

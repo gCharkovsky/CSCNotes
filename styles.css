@@ -1,9 +1,8 @@
 :root {
     --header-height: 68px;
     --content-width: 100%;
-    --icon-size: 40px;
-    --status-width: 3px;
-    --border-radius: 6px;
+    --icon-size: 2.5rem;
+    --card-border-radius: 6px;
 
 
     --block-bg: #FFFFFF;
@@ -18,14 +17,14 @@
 
     --placeholder-color: #37414880;
 
-    --h-color: #3A4248;
-    --p-color: #20282F;
+    --header-text-color: #3A4248;
+    --main-text-color: #20282F;
     --h-text-weight: 600;
 
-    --task-prim: #FFFFFF;
-    --task-secu: #0D3F67;
-    --task-tres: #6B48FF;
-    --task-quad: #1EE3CF;
+    --note-card_color_whie: #FFFFFF;
+    --note-card_color_dark-blue: #0D3F67;
+    --note-card_color_violet: #6B48FF;
+    --note-card_color_cyan: #1EE3CF;
 }
 
 .dark-theme {
@@ -35,8 +34,8 @@
     --b-shadow-color: rgba(255, 255, 255, 0.12);
     --l-shadow-color: rgba(255, 255, 255, 0.1);
 
-    --h-color: #FFFFFF;
-    --p-color: #CCCCCC;
+    --header-text-color: #FFFFFF;
+    --main-text-color: #CCCCCC;
 
     --task-done: #1EE3CF;
     --task-future: #6B48FF;
@@ -84,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "SF UI Display", Arial, sans-serif;
     font-weight: var(--h-text-weight);
     letter-spacing: .03em;
-    color: var(--h-color);
+    color: var(--header-text-color);
     line-height: 1.5rem
 }
 
@@ -93,41 +92,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
     padding: 0 .75rem;
 }
 
 p {
-    padding-top: 5px;
-    color: var(--p-color);
+    color: var(--main-text-color);
     line-height: 1.5rem;
 }
 
-a {
-    text-decoration: none;
-}
 
-.svg-fill svg rect {
-    fill: var(--primary-color);
-    stroke: var(--primary-color);
-    color: var(--primary-color);
-}
-
-button {
-    background: none;
-    border: none;
+.icon-button:not(:first-child){
     height: var(--icon-size);
     widows: var(--icon-size);
-    padding: 0;
     cursor: pointer;
+    background: none;
     margin-left: 0.75rem;
 }
 
-button img {
+.icon-button img {
     height: 100%;
 }
 
-button svg {
+.icon-button svg {
     height: 100%;
 }
 
@@ -141,23 +127,21 @@ button svg {
     stroke: var(--secondary-color);
 }
 
-textarea {
-    resize: vertical;
-    box-sizing: border-box;
-    border: none;
-    background: var(--block-bg);
+.new-note__textarea {
     line-height: 1.5rem;
-    padding: 0;
     margin: .5rem .5rem 0 .5rem;
     width: calc(100% - 1rem)
 }
 
 input {
-    border: none;
-    font-family: inherit;
-    background: none;
-    font-size: 1rem;
-    color: var(--p-color);
+    font-size: inherit;
+    color: inherit;
+}
+
+textarea {
+    resize: none;
+    font-size: inherit;
+    color: inherit;
 }
 
 input::-ms-clear {
@@ -172,27 +156,20 @@ input::placeholder, textarea::placeholder {
     color: var(--placeholder-color);
 }
 
-:focus {
+button:focus, textarea:focus, input:focus {
     outline: 0;
 }
 
-.textarea_S {
+.textarea_header {
     font-family: "SF UI Display", Arial, sans-serif;
     font-weight: var(--h-text-weight);
-    font-size: 1.25rem;
+    font-size: 1.25em;
     letter-spacing: .03em;
-    resize: none;
-    color: var(--h-color);
-}
-
-.textarea_M {
-    font-family: "SF UI Text", Arial, sans-serif;
-    font-size: 1rem;
-    color: var(--p-color);
+    color: var(--header-text-color);
 }
 
 
-header {
+.app-header {
     height: var(--header-height);
     width: var(--content-width);
     display: flex;
@@ -202,17 +179,15 @@ header {
 
 .logo {
     display: flex;
-    box-sizing: border-box;
     height: var(--icon-size);
-    padding: 4px;
+    padding: 0.25rem;
     align-content: center;
 }
 
 .logo h1 {
-    display: inline;
     align-self: center;
-    margin: 0;
-    font-size: 1.5rem;
+    margin-left: 0.25rem;
+    font-size: 1.625rem;
     line-height: 2rem;
 
     color: var(--primary-color);
@@ -224,14 +199,15 @@ header {
     fill: var(--primary-color);
 }
 
-.header-menu {
+.header-controls {
     display: flex;
     justify-content: space-between;
 }
 
-.header-menu__search {
+.header-controls__search {
     display: inline-flex;
     align-content: center;
+    margin-left: 0.75rem;
 }
 
 .input__clear {
@@ -240,8 +216,8 @@ header {
     margin: 0;
 }
 
-.header-menu__search_collapsed input,
-.header-menu__search_collapsed .input__clear {
+.header-controls__search_collapsed .search__input,
+.header-controls__search_collapsed .search__input-clear {
     display: none;
 }
 
@@ -252,25 +228,25 @@ main {
 
 .new-note {
     padding: .5rem;
-    border-radius: var(--border-radius);
+    border-radius: var(--card-border-radius);
     box-shadow: var(--b-shadow);
     background: var(--block-bg);
     margin-bottom: 1.25rem;
 }
 
-.new-note__action-panel {
+.new-note__action-block {
     display: flex;
     justify-content: space-between;
     height: var(--icon-size);
 }
 
-.color-picker {
+.color-picker__item {
     margin: calc(var(--icon-size) * 0.2);
     width: calc(var(--icon-size) * 0.6);
     height: calc(var(--icon-size) * 0.6);
     border-radius: var(--icon-size);
     border: 2px solid var(--secondary-color);
-    background: var(--task-prim);
+    background: var(--note-card_color_whie);
 }
 
 .notes {
@@ -279,44 +255,39 @@ main {
     flex-direction: column;
 }
 
-.notes__note {
+.notes__note-card {
     position: relative;
     background: var(--block-bg);
     padding: 1rem 1.5rem 1.5rem 1rem;
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
     box-shadow: var(--l-shadow);
     margin-bottom: .75rem;
+    border-style: solid;
+    border-color: red;
+    border-left-width: 3px;
+}
+.note-card_text{
+    padding-top: 5px;
 }
 
-.notes__note::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    content: "";
-    display: block;
-    height: 100%;
-    width: 3px;
-    background: red;
+
+.notes__note-card_color_white {
+    border-color: var(--note-card_color_whie);
 }
 
-.notes__note_prim::before {
-    background: var(--task-prim);
+.notes__note-card_color_dark-blue {
+    border-color: var(--note-card_color_dark-blue);
 }
 
-.notes__note_secu::before {
-    background: var(--task-secu);
+.notes__note-card_color_violet {
+    border-color: var(--note-card_color_violet);
 }
 
-.notes__note_tres::before {
-    background: var(--task-tres);
+.notes__note-card_color_cyan {
+    border-color: var(--note-card_color_cyan);
 }
 
-.notes__note_quad::before {
-    background: var(--task-quad);
-}
-
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 840px) {
     :root {
         --content-width: 800px;
     }

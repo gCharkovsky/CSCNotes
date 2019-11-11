@@ -9,10 +9,6 @@ function set_theme() {
             document.body.className = "dark-theme";
     }
 }
-
-set_theme();
-let search = document.getElementsByClassName("header-menu__search")[0];
-
 function toggle_theme() {
     if (document.body.className === "dark-theme") {
         document.body.className = "";
@@ -23,11 +19,4 @@ function toggle_theme() {
     }
 }
 
-function show_search() {
-    search.classList.remove("header-menu__search_collapsed");
-}
-
-function hide_search() {
-    if (search.children[1].value === "")
-        search.classList.add("header-menu__search_collapsed");
-}
+set_theme();

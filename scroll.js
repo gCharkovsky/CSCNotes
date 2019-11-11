@@ -6,14 +6,16 @@ const WINDOW_HEIGHT = document.documentElement.clientHeight;
 const TEMPLATE_HTML = '<h3><span>Assignment #0. Loading</span></h3>' +
     '<p class="note-card_text"><span>Если вы можете читать этот текст, значит что-то пошло не так или заметки все еще загружаются. Если данный текст не пропадает уже больше 5 минут, значит проблема на нашей стороне. Ну или у вас интернет отвалился.</span></p>';
 
-let current_notes = get_notes(0, PAGE_DEFAULT);
+let total_count_of_notes = PAGE_LIMIT;
+total_count_of_notes = get_number_of_notes();
+let current_notes = get_notes(0, Math.min(PAGE_DEFAULT, total_count_of_notes));
 let first = 0;
 let last = PAGE_DEFAULT;
 let note_list = document.getElementsByClassName('notes')[0];
 let show_prefix_mocks = false;
 let show_postfix_mocks = true;
 let note_template;
-let total_count_of_notes = get_number_of_notes();
+
 
 for (let i = 0; i < Math.min(PAGE_DEFAULT + DOWNLOAD_COUNT, total_count_of_notes); i++) {
     note_template = document.createElement('article');
@@ -25,6 +27,7 @@ for (let i = 0; i < Math.min(PAGE_DEFAULT, total_count_of_notes); i++) {
     note_list.children[i].innerHTML = '<h3>' + current_notes[i].title + '</h3>\n' +
         '<p class="note-card_text">' + current_notes[i].text + '</p>';
     note_list.children[i].className = 'notes__note-card notes__note-card_color_cyan';
+    note_list.children[i].style.borderColor = current_notes[i].color;
 
 }
 
@@ -72,6 +75,7 @@ function set_first_notes(notes) {
         note_list.children[i].innerHTML = '<h3>' + notes[i].title + '</h3>\n' +
             '<p class="note-card_text">' + notes[i].text + '</p>';
         note_list.children[i].className = 'notes__note-card notes__note-card_color_cyan';
+        note_list.children[i].style.borderColor = notes[i].color;
     }
 }
 
@@ -82,7 +86,7 @@ function set_last_notes(notes) {
         note_list.children[i].innerHTML = '<h3>' + notes[i - total_len + len].title + '</h3>\n' +
             '<p class="note-card_text">' + notes[i - total_len + len].text + '</p>';
         note_list.children[i].className = 'notes__note-card notes__note-card_color_cyan';
-
+        note_list.children[i].style.borderColor = notes[i].color;
     }
 }
 

@@ -1,23 +1,9 @@
-doAjax = function (url, type, data, success) {
-    if ($.cookie('token')) {
-        data = 'token=' + $.cookie('token') + '&' + data;
-    }
-    return $.ajax({
-        url: url,
-        type: type,
-        dataType: 'json',
-        data: data,
-        xhrFields: {withCredentials: true},
-        success: success,
-    });
-};
-
 var xhr = new XMLHttpRequest();
-const URL = 'http://127.0.0.1:5000/';
+const URL = 'http://csc-notes.ru/';
 
 function get_notes(from, to) {
     xhr.open("POST", URL + 'notes', false);
-    let str = 'frompos=' + from + '&topos=' + to
+    let str = 'frompos=' + from + '&topos=' + to;
     console.log(str);
     xhr.send(from + ' ' + to);
     if (xhr.status !== 200) {

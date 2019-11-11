@@ -267,7 +267,7 @@ main {
     border-left-width: 3px;
 }
 .note-card_text{
-    padding-top: 5px;
+    margin-top: 5px;
 }
 
 
@@ -286,6 +286,15 @@ main {
 .notes__note-card_color_cyan {
     border-color: var(--note-card_color_cyan);
 }
+
+.notes__note-card_placeholder{
+    border-color: lightgray;
+}
+.notes__note-card_placeholder span{
+    background: lightgray;
+    color: lightgray;
+}
+
 
 @media screen and (min-width: 840px) {
     :root {

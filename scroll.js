@@ -86,34 +86,38 @@ function set_last_notes(notes) {
         note_list.children[i].innerHTML = '<h3>' + notes[i - total_len + len].title + '</h3>\n' +
             '<p class="note-card_text">' + notes[i - total_len + len].text + '</p>';
         note_list.children[i].className = 'notes__note-card notes__note-card_color_cyan';
-        note_list.children[i].style.borderColor = notes[i].color;
+        note_list.children[i].style.borderColor = notes[i - total_len + len].color;
     }
 }
 
 function do_scroll_down() {
     console.log('scroll down');
-    if (last === total_count_of_notes)
+    if (last === total_count_of_notes) {
+        show_postfix_mocks = false;
         return 'некуда крутить';
-    else
+    } else
         show_postfix_mocks = true;
 
     if (first > 0)
         show_prefix_mocks = true;
 
 
+    let prev_first = first
     last += DOWNLOAD_COUNT;
     last = Math.min(last, total_count_of_notes);
+
+    let notes = get_notes(last - DOWNLOAD_COUNT, last);
+    set_last_notes(notes);
 
     if (last - first > PAGE_LIMIT) {
         first = Math.max(0, last - PAGE_LIMIT);
         if (show_prefix_mocks)
-            remove_beginning(DOWNLOAD_COUNT);
-        mockify_beginning(DOWNLOAD_COUNT);
+            remove_beginning(first - prev_first);
+        mockify_beginning(first - prev_first);
         show_prefix_mocks = true;
     }
 
-    let notes = get_notes(first, last);
-    set_last_notes(notes);
+    console.log('notes added');
     if (last < total_count_of_notes)
         add_mocks_to_end(Math.min(DOWNLOAD_COUNT, total_count_of_notes - last));
     else
@@ -125,23 +129,24 @@ function do_scroll_down() {
 
 function do_scroll_up() {
     console.log('scroll up');
-    if (first === 0)
+    if (first === 0) {
+        show_prefix_mocks = false;
         return 'некуда крутить';
-    else
+    } else
         show_prefix_mocks = true;
 
-    if(last<total_count_of_notes)
+    if (last < total_count_of_notes)
         show_postfix_mocks = true;
 
-
+    let prev_last = last;
     first -= DOWNLOAD_COUNT;
     first = Math.max(0, first);
 
     if (last - first > PAGE_LIMIT) {
         last = Math.min(first + PAGE_LIMIT, total_count_of_notes);
         if (show_postfix_mocks)
-            remove_ending(DOWNLOAD_COUNT);
-        mockify_ending(DOWNLOAD_COUNT);
+            remove_ending(prev_last - last);
+        mockify_ending(prev_last - last);
     }
     let notes = get_notes(first, last);
     set_first_notes(notes);
@@ -159,7 +164,7 @@ add_mocks_to_end();
 window.addEventListener('scroll', function () {
     while ((document.documentElement.getBoundingClientRect().bottom - WINDOW_HEIGHT < CARD_PLACEHOLDER_HEIGHT * DOWNLOAD_COUNT) && show_postfix_mocks)
         do_scroll_down();
-    while ((document.documentElement.getBoundingClientRect().top > -CARD_PLACEHOLDER_HEIGHT * DOWNLOAD_COUNT - 300) && show_prefix_mocks)
+    while ((document.documentElement.getBoundingClientRect().top > -CARD_PLACEHOLDER_HEIGHT * DOWNLOAD_COUNT - 500) && show_prefix_mocks)
         do_scroll_up();
 
 });

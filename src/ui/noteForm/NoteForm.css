@@ -1,0 +1,22 @@
+.note-form {
+    padding: .5rem;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--b-shadow);
+    background: var(--block-bg);
+    margin-bottom: 1.25rem;
+}
+
+.note-form__input-block {
+    padding: 0.5rem;
+}
+
+.note-form__action-block {
+    display: flex;
+    justify-content: space-between;
+    height: var(--icon-size);
+}
+.action-block__controls {
+    display: flex;
+    justify-content: left;
+    height: var(--icon-size);
+}

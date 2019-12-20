@@ -1,0 +1,17 @@
+:root {
+    --block-bg: #FFFFFF;
+    --global-bg: #FFFFFF;
+
+    --b-shadow-color: rgba(13, 63, 103, 0.14);
+    --l-shadow-color: rgba(13, 63, 103, 0.10);
+
+    --primary-color: #0D3F67;
+    --secondary-color: #37414880;
+
+
+    --placeholder-color: #37414880;
+
+    --header-text-color: #3A4248;
+    --main-text-color: #20282F;
+    --h-text-weight: 600;
+}

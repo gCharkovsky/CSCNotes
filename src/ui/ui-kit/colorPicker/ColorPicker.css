@@ -1,0 +1,6 @@
+.color-picker {
+    height: var(--icon-size);
+    display: flex;
+    flex-direction: row;
+
+}

@@ -1,0 +1,49 @@
+:root {
+    --header-height: 68px;
+    --content-width: 100%;
+    --icon-size: 2.5rem;
+    --card-border-radius: 6px;
+
+    --h-text-weight: 700;
+    --h-text-family: "SF UI Display", Arial, sans-serif;
+    --main-text-family: "SF UI Text", Arial, sans-serif;
+
+}
+
+@font-face {
+    font-family: "SF UI Display"; /* Гарнитура шрифта */
+    src: url(/../assets/Fonts/sf-ui-display/sf-ui-display-medium.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: "SF UI Text"; /* Гарнитура шрифта */
+    src: url(/../assets/Fonts/sf-ui-text/SFUIText-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+html {
+    /* Эффекты*/
+    --b-shadow: 0 0.25rem 0.75rem var(--b-shadow-color);
+    --l-shadow: 0 0.1rem 0.25rem var(--l-shadow-color);
+
+    font-family: var(--main-text-family);
+    font-size: 16px;
+    background: var(--global-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--h-text-family);
+    font-weight: var(--h-text-weight);
+    letter-spacing: .03em;
+    color: var(--header-text-color);
+    line-height: 1.5rem
+}
+
+p {
+    color: var(--main-text-color);
+    line-height: 1.5rem;
+}
+
+:focus {
+    outline-color: var(--primary-color);
+    outline-width: 1px;
+}

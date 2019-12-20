@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c6eac02d-5eaf-4c59-b234-0bd4c68bd263" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles_old.css" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="hw1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\georg\OneDrive\01_Учеба\CSC-Autumn2019\Front\Notes\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1R6xv4jsasupun6RGvRkgaq14Nu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\georg\OneDrive\01_Учеба\CSC-Autumn2019\Front\Notes" />
+      <recent name="C:\Users\georg\OneDrive\01_Учеба\CSC-Autumn2019\Front\Notes\static\UIkit" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6eac02d-5eaf-4c59-b234-0bd4c68bd263" name="Default Changelist" comment="" />
+      <created>1569001573332</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569001573332</updated>
+      <workItem from="1569001574570" duration="2427000" />
+      <workItem from="1569070640696" duration="3002000" />
+      <workItem from="1569240164773" duration="8101000" />
+      <workItem from="1569248448598" duration="69000" />
+      <workItem from="1569248799506" duration="11928000" />
+      <workItem from="1569603192454" duration="3641000" />
+      <workItem from="1569795133301" duration="4269000" />
+      <workItem from="1569813494452" duration="78000" />
+      <workItem from="1569829473524" duration="12209000" />
+      <workItem from="1570197130287" duration="2758000" />
+      <workItem from="1570214593498" duration="736000" />
+      <workItem from="1570380917503" duration="33000" />
+      <workItem from="1570381084472" duration="2190000" />
+    </task>
+    <task id="LOCAL-00001" summary="Добавлено автоматическое включение темной темы с 20:00 до 8:00">
+      <created>1569260121812</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569260121812</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Минорные исправления">
+      <created>1569261183940</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569261183940</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Пацанский флекс">
+      <created>1569813533619</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1569813533619</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Пацанский флекс">
+      <created>1569830033738</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569830033738</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Revert &quot;Пацанский флекс&quot;&#10;&#10;This reverts commit 0919292a">
+      <created>1569830343887</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569830343887</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Removed classes and js,css">
+      <created>1569830415835</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569830415835</updated>
+    </task>
+    <task id="LOCAL-00007" summary="*init">
+      <created>1569830918290</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569830918290</updated>
+    </task>
+    <task id="LOCAL-00008" summary="hw1: html">
+      <created>1569831217233</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569831217233</updated>
+    </task>
+    <task id="LOCAL-00009" summary="hw2: css, fonts, assets, night mode">
+      <created>1569831489674</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569831489674</updated>
+    </task>
+    <task id="LOCAL-00010" summary="hw2: mobile pre-alpha&#10;&#10;P.S. hw1: minor fix">
+      <created>1569843587822</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569843587822</updated>
+    </task>
+    <task id="LOCAL-00011" summary="hw1: fixes">
+      <created>1570208025647</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570208025648</updated>
+    </task>
+    <task id="LOCAL-00012" summary="hw1: minor fix">
+      <created>1570208221702</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1570208221702</updated>
+    </task>
+    <task id="LOCAL-00013" summary="hw1: one more fix (removed task-status div)">
+      <created>1570208631321</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1570208631321</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Добавлено автоматическое включение темной темы с 20:00 до 8:00" />
+    <MESSAGE value="Минорные исправления" />
+    <MESSAGE value="Пацанский флекс" />
+    <MESSAGE value="Revert &quot;Пацанский флекс&quot;&#10;&#10;This reverts commit 0919292a" />
+    <MESSAGE value="Removed classes and js,css" />
+    <MESSAGE value="*init" />
+    <MESSAGE value="hw1: html" />
+    <MESSAGE value="hw2: css, fonts, assets, night mode" />
+    <MESSAGE value="hw1: removed labels and form for inputs," />
+    <MESSAGE value="hw2: mobile pre-alpha&#10;&#10;P.S. hw1: minor fix" />
+    <MESSAGE value="hw1: fixes" />
+    <MESSAGE value="hw1: minor fix" />
+    <MESSAGE value="hw1: one more fix (removed task-status div)" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw1: one more fix (removed task-status div)" />
+  </component>
+</project>

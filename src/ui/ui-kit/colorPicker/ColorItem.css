@@ -1,0 +1,8 @@
+.color-item {
+    margin: calc(var(--icon-size) * 0.2);
+    width: calc(var(--icon-size) * 0.6 - 2px);
+    height: calc(var(--icon-size) * 0.6 - 2px);
+    border-radius: var(--icon-size);
+    border: 2px solid var(--secondary-color);
+    cursor: pointer;
+}

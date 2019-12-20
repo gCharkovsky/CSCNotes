@@ -1,0 +1,17 @@
+:root {
+    --block-bg: #595959;
+    --global-bg: #252525;
+
+    --b-shadow-color: rgba(255, 255, 255, 0.12);
+    --l-shadow-color: rgba(255, 255, 255, 0.1);
+
+    --header-text-color: #FFFFFF;
+    --main-text-color: #CCCCCC;
+
+    --task-done: #1EE3CF;
+    --task-future: #6B48FF;
+
+    --primary-color: #FFFFFF;
+    --secondary-color: #B9BBBD80;
+    --placeholder-color: rgba(240, 240, 240, 0.5);;
+}

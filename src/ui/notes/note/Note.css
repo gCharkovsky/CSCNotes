@@ -1,0 +1,14 @@
+.note-card {
+    position: relative;
+    background: var(--block-bg);
+    padding: 1rem 1.5rem 1.5rem 1rem;
+    border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+    box-shadow: var(--l-shadow);
+    margin-bottom: .75rem; /*TODO: перенести инфу про маржины в notes*/
+    border-style: solid;
+    border-left-width: 3px;
+    text-align: left;
+}
+.note-card_text{
+    margin-top: 5px;
+}

@@ -1,0 +1,40 @@
+.header {
+    height: var(--header-height);
+    width: var(--content-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    height: var(--icon-size);
+    padding: 0.25rem;
+    align-content: center;
+}
+
+.logo h1 {
+    align-self: center;
+    margin-left: 0.25rem;
+    font-size: 1.625rem;
+    line-height: 2rem;
+
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.logo svg {
+    align-self: center;
+    fill: var(--primary-color);
+}
+
+.header-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-controls>button:not(:first-child) {
+    display: inline-flex;
+    align-content: center;
+    margin-left: 0.75rem;
+}
